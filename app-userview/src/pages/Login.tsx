@@ -25,7 +25,10 @@ const Login = () => {
     
     
     const submitHandler  = (e: React.FormEvent<HTMLFormElement>) => {
-        
+        if(personS.username === username && personS.password === password) {
+           // dispatch()
+        }
+
         e.preventDefault()
     }
 

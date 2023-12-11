@@ -3,7 +3,8 @@ import { PersonAction } from "../actions/actions"
 
 const initialState = {
    username: "",
-   password:""
+   password:"",
+   isloggedIn: false
     
 }
 

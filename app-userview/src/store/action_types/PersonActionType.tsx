@@ -17,6 +17,14 @@ const editPerson = (value: any) => {
 }
 
 
+const loggedIn = (value: any) => {
+    return {
+        type: PersonAction.LOGGED_IN,
+        payload: value
+    }
+}
+
+
 
 
 export  {addPerson, editPerson}
