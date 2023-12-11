@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 import {addPerson } from '../store/action_types/PersonActionType'
 const Login = () => {
 
@@ -24,7 +25,7 @@ const Login = () => {
     
     
     const submitHandler  = (e: React.FormEvent<HTMLFormElement>) => {
-        dispatch(addPerson({username: username, password: password}))
+        
         e.preventDefault()
     }
 
@@ -39,8 +40,9 @@ const Login = () => {
             <input  value={username} onChange={usernameHandler}  type="text" placeholder="Email" />
             <input  value={password} onChange={passwordHandler}  type="text" placeholder="Password" />
             <button>Login</button>
-
         </form>
+
+        <p>Need an account? <Link to={"/register"} > Register </Link>    </p>
     </div>
   )
 }
