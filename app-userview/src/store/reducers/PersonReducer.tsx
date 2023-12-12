@@ -23,6 +23,12 @@ const PersonReducer = (state = initialState, action: any) => {
                 ...state,
                 password: ""
             }
+        
+        case PersonAction.LOGGED_IN:
+            return {
+                ...state,
+                isloggedIn: action.payload.isLoggedIn
+            }
 
         default:
             return state

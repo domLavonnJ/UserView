@@ -1,6 +1,5 @@
 import { PersonAction } from "../actions/actions"
 
-
 const addPerson = (value: any) => {
 
     return {
@@ -16,7 +15,6 @@ const editPerson = (value: any) => {
     }
 }
 
-
 const loggedIn = (value: any) => {
     return {
         type: PersonAction.LOGGED_IN,
@@ -27,4 +25,4 @@ const loggedIn = (value: any) => {
 
 
 
-export  {addPerson, editPerson}
+export  {addPerson, editPerson, loggedIn,}

@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { addPerson } from '../store/action_types/PersonActionType'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Register = () => {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
     const dispatch = useDispatch()
 
        const usernameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,6 +23,8 @@ const Register = () => {
     const submitHandler  = (e: React.FormEvent<HTMLFormElement>) => {
         dispatch(addPerson({username: username, password: password}))
         e.preventDefault()
+        navigate("/")
+
     }
 
   return (
