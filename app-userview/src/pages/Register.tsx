@@ -24,7 +24,6 @@ const Register = () => {
         dispatch(addPerson({username: username, password: password}))
         e.preventDefault()
         navigate("/")
-
     }
 
   return (
@@ -39,6 +38,7 @@ const Register = () => {
     <p>Already have an accout? <Link to={"/"}> Login </Link></p>
 </form>
 </div>
+
   )
 }
 

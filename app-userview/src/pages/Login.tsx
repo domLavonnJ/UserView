@@ -11,7 +11,6 @@ const Login = () => {
     var personS = useSelector((store: any)  => store.personR)
     var dispatch = useDispatch()
 
-
     const usernameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
                 setUsername(e.target.value)
                 console.log(username)     
@@ -25,22 +24,16 @@ const Login = () => {
     
     const submitHandler  = (e: React.FormEvent<HTMLFormElement>) => {
         if(personS.username === username && personS.password === password) {
-           dispatch(loggedIn({isloggedIn: true}))
+           dispatch(loggedIn({isLoggedIn: true}))
 
            setTimeout(() => {
              setIsRedirect(true)
              navigate("/home")
 
-           }, 2000);
+           }, 500);
         }
-
-
-        
-
         e.preventDefault()
     }
-
-   
 
   return (
     <div>
